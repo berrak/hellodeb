@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/berrak/hellodeb.svg?branch=master)]
+
 # hellodeb
 
 ## Purpose
@@ -37,8 +39,8 @@ A make file provides following help:
 $ make help
 help ---------- show this help
 test ---------- run tests
-clean --------- remove build binary and all artifacts
-dist ---------- creates source tar archive (git commit first)
+clean --------- remove built binary and all artifacts
+dist ---------- creates source tar archive (do: git commit first)
 ```
 
 ## License

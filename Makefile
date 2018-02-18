@@ -14,8 +14,8 @@ help:
 	@echo
 	@echo "help ---------- show this help"
 	@echo "test ---------- run tests"
-	@echo "clean --------- remove build binary and all artifacts"
-	@echo "dist ---------- creates source tar archive (git commit first)"
+	@echo "clean --------- remove built binary and all artifacts"
+	@echo "dist ---------- creates source tar archive (do: git commit first)"
 	@echo
 test:
 	@go test -v ./...	
