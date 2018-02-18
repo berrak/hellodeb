@@ -23,6 +23,7 @@ Next download the project and build the binary file.
 ## download source
 $ go get -u github.com/berrak/hellodeb/cmd/hello
 ## create the binary
+$ cd $GOPATH/src/github.com/berrak/hellodeb
 $ make
 ```
 
