@@ -41,7 +41,8 @@ $ make help
 help ---------- show this help
 test ---------- run tests
 clean --------- remove built binary and all artifacts
-dist ---------- creates source tar archive (do: git commit first)
+install ------- install binary to /usr/local/bin
+dist ---------- create source tar archive (do: git commit first)
 ```
 
 ## License

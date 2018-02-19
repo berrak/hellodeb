@@ -15,12 +15,15 @@ help:
 	@echo "help ---------- show this help"
 	@echo "test ---------- run tests"
 	@echo "clean --------- remove built binary and all artifacts"
-	@echo "dist ---------- creates source tar archive (do: git commit first)"
+	@echo "install ------- install binary to /usr/local/bin"
+	@echo "dist ---------- create source tar archive (do: git commit first)"
 	@echo
 test:
 	@go test -v ./...	
 clean:
 	@rm -fr bin
 	@rm -rf *.tar.gz
+install: all
+	@cp bin/hello /usr/local/bin
 dist:
 	@git archive --output=$(PKG) --prefix=$(PKG_NAME)/ HEAD
