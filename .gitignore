@@ -20,3 +20,6 @@
 
 # binaries
 ./hello
+
+# archives
+*.tar.gz

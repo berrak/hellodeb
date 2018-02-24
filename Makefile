@@ -9,12 +9,12 @@ PKG:= $(PKG_NAME).tar.gz
 help:
 	@echo
 	@echo "help ---------- show this help"
+	@echo "bin ----------- build a binary"
 	@echo "test ---------- run tests"
 	@echo "clean --------- remove built binary and all artifacts"
-	@echo "install ------- install binary to /usr/local/bin"
 	@echo "dist ---------- create source tar archive (do: git commit first)"
 	@echo
-all: 
+bin: 
 	@go build cmd/hello.go
 	@test -d bin || mkdir bin
 	@test -f hello && mv hello bin
@@ -23,7 +23,7 @@ test:
 clean:
 	@rm -fr bin
 	@rm -rf *.tar.gz
-install: all
-	@cp bin/hello /usr/local/bin
+install: 
+	@echo "No install here"
 dist:
 	@git archive --output=$(PKG) --prefix=$(PKG_NAME)/ HEAD
