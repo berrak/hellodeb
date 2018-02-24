@@ -6,10 +6,6 @@ VERSION := $(shell (cat VERSION))
 PKG_NAME := $(NAME)-$(VERSION)
 PKG:= $(PKG_NAME).tar.gz
 
-all: 
-	@go build cmd/hello.go
-	@test -d bin || mkdir bin
-	@test -f hello && mv hello bin
 help:
 	@echo
 	@echo "help ---------- show this help"
@@ -18,6 +14,10 @@ help:
 	@echo "install ------- install binary to /usr/local/bin"
 	@echo "dist ---------- create source tar archive (do: git commit first)"
 	@echo
+all: 
+	@go build cmd/hello.go
+	@test -d bin || mkdir bin
+	@test -f hello && mv hello bin
 test:
 	@go test -v ./...	
 clean:
