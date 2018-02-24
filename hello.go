@@ -1,4 +1,3 @@
-// Package main is the main entry to hello
 /*
 Copyright 2018 The hello Authors.
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,17 +15,10 @@ limitations under the License.
 package main
 
 import "fmt"
-import app "github.com/berrak/hellodeb/pkg/app"
-
-/*
-The hello import path works because:
-1. GOPATH is set to ~/go i.e. go 'workspace'
-2. go expect that tree structure is GOPATH/src
-3. Below src the defined project home: github.com/berrak/hello
-*/
+import utils "pkg/utils"
 
 func main() {
 	s := "Hello world"
-	revMsg := app.Reverse(s)
+	revMsg := utils.Reverse(s)
 	fmt.Println(revMsg)
 }

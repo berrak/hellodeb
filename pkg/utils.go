@@ -1,4 +1,3 @@
-// Package app contains only internal functions to cmd/hello
 /*
 Copyright 2018 The hello Authors.
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,17 +12,13 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-package app
+package utils
 
-import "testing"
-
-// Simple singel test
-func TestReverse(t *testing.T) {
-
-	want := "9876543210"
-	got := Reverse("0123456789")
-	if got != want {
-		t.Errorf("Want %s but got %s", want, got)
+// Reverse returns string in reverse order of characters
+func Reverse(s string) string {
+	runes := []rune(s)
+	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
+		runes[i], runes[j] = runes[j], runes[i]
 	}
-
+	return string(runes)
 }
