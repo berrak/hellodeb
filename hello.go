@@ -16,7 +16,7 @@ limitations under the License.
 package main
 
 import "fmt"
-import utils "pkg/utils"
+import utils "github.com/berrak/hellodeb/utils"
 
 func main() {
 	s := "Hello world"
