@@ -4,7 +4,7 @@
 REPONAME := hellodeb
 VERSION := $(shell (cat VERSION))
 PKG_NAME := $(REPONAME)-$(VERSION)
-PKG:= $(PKG_NAME).tar.gz
+PKG:= golang-github-berrak-$(PKG_NAME).tar.gz
 
 all: 
 	@go build hello.go
