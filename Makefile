@@ -1,9 +1,9 @@
 #!/usr/bin/make
 # WARN: gmake syntax
 
-NAME := hello
+REPONAME := hellodeb
 VERSION := $(shell (cat VERSION))
-PKG_NAME := $(NAME)-$(VERSION)
+PKG_NAME := $(REPONAME)-$(VERSION)
 PKG:= $(PKG_NAME).tar.gz
 
 help:
