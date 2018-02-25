@@ -20,7 +20,7 @@ test:
 clean:
 	@rm -rf *.tar.gz
 	@rm -f hello
-install: 
-	@echo "Installation is just a dummy target"
+install: all
+	@cp hello /usr/local/bin
 dist:
 	@git archive --output=$(PKG) --prefix=$(PKG_NAME)/ HEAD
